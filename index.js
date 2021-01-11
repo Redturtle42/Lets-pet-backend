@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 const API_KEY = process.env.API_KEY;
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(process.env.PORT || 5000, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
     service: "gmail",
